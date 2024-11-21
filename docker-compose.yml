@@ -1,0 +1,10 @@
+version: '3'
+services:
+  vite-app:
+    build: .
+    ports:
+      - "3000:5173"  # Map port 5173 inside the container to port 3000 on your machine
+    volumes:
+      - .:/app  # Mount the current directory to the /app directory in the container
+    stdin_open: true
+    tty: true
